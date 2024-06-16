@@ -1,4 +1,6 @@
-# Package Managers
-package-lock.json
+*.md
 pnpm-lock.yaml
+package-lock.json
 yarn.lock
+.svelte-kit
+build
