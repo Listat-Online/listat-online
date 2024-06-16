@@ -2,6 +2,8 @@
     "name": "listat-online-frontend",
     "version": "0.0.1",
     "private": true,
+    "author": "Tuomas Suutari",
+    "license": "MIT",
     "scripts": {
         "dev": "vite dev --clearScreen false",
         "build": "vite build",

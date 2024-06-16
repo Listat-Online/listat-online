@@ -1,6 +1,9 @@
 {
     "name": "listat-online",
     "version": "0.1.0",
+    "private": true,
+    "author": "Tuomas Suutari",
+    "license": "MIT",
     "description": "Listat Online",
     "scripts": {
         "format": "prettier --write .",
@@ -10,8 +13,6 @@
         "type": "git",
         "url": "git+https://github.com/Listat-Online/listat-online.git"
     },
-    "author": "",
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/Listat-Online/listat-online/issues"
     },
