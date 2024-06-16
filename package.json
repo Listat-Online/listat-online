@@ -1,0 +1,27 @@
+{
+    "name": "listat-online",
+    "version": "0.1.0",
+    "description": "Listat Online",
+    "scripts": {
+        "format": "prettier --write .",
+        "start": "npm --prefix pocketbase run serve -- --dev & npm --prefix frontend run dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Listat-Online/listat-online.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Listat-Online/listat-online/issues"
+    },
+    "homepage": "https://github.com/Listat-Online/listat-online#readme",
+    "workspaces": [
+        "frontend",
+        "pocketbase"
+    ],
+    "dependencies": {
+        "prettier": "^3.3.2",
+        "prettier-plugin-svelte": "^3.2.4"
+    }
+}

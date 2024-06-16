@@ -1,9 +1,9 @@
 {
-    "name": "listat-online",
+    "name": "listat-online-frontend",
     "version": "0.0.1",
     "private": true,
     "scripts": {
-        "dev": "vite dev",
+        "dev": "vite dev --clearScreen false",
         "build": "vite build",
         "preview": "vite preview",
         "test": "npm run test:integration && npm run test:unit",

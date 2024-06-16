@@ -1,0 +1,7 @@
+{
+    "name": "listat-online-backend",
+    "scripts": {
+        "postinstall": "python3 get-pocketbase 0.22.13",
+        "serve": "./pocketbase serve"
+    }
+}
