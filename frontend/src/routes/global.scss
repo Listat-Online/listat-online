@@ -1,0 +1,48 @@
+@use '@picocss/pico/scss/pico' with (
+    $theme-color: 'yellow',
+    $enable-semantic-container: true,
+    $semantic-root-element: '#root',
+    $enable-classes: true
+);
+
+@media (min-width: 768px) {
+    body > #root > * {
+        max-width: 30rem;
+    }
+}
+
+:root {
+    --pico-border-radius: 1rem;
+    --pico-form-element-spacing-vertical: 0.25rem;
+    --pico-spacing: 0.5rem;
+    --pico-block-spacing-vertical: 0.25rem;
+}
+
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+    --pico-primary-hover: color-mix(in srgb, black 50%, var(--pico-primary));
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --pico-primary-hover: color-mix(
+            in srgb,
+            white 70%,
+            var(--pico-primary)
+        );
+    }
+}
+[data-theme='dark'] {
+    :root:not([data-theme]) {
+        --pico-primary-hover: color-mix(
+            in srgb,
+            white 70%,
+            var(--pico-primary)
+        );
+    }
+}
+
+button {
+    --pico-outline-width: 0.25rem;
+    --pico-primary-focus: var(--pico-primary-hover);
+}
