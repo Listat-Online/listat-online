@@ -1,0 +1,31 @@
+{
+    "folders": [
+        {
+            "name": "Listat Online Frontend",
+            "path": "frontend",
+        },
+        {
+            "name": "PocketBase",
+            "path": "pocketbase",
+        },
+        {
+            "name": "ROOT",
+            "path": ".",
+        },
+    ],
+    "settings": {
+        "files.exclude": {
+            "node_modules": true,
+            ".svelte-kit": true,
+        },
+        "npm.packageManager": "pnpm",
+    },
+    "extensions": {
+        "recommendations": [
+            "svelte.svelte-vscode",
+            "cnshenj.vscode-task-manager",
+            "msjsdiag.debugger-for-chrome",
+            "vitest.explorer",
+        ],
+    },
+}
