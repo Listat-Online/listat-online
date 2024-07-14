@@ -1,7 +1,10 @@
 *.md
+*.zip
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
 .svelte-kit
 build
+pb_data
 pb_public
+pocketbase/pocketbase*
