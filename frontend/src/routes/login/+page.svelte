@@ -98,6 +98,7 @@
     </article>
 </form>
 
+<!--
 <hr />
 
 <article>
@@ -107,3 +108,4 @@
     <button on:click={() => login('github')}>Login with GitHub</button>
     <button on:click={() => login('gitlab')}>Login with GitLab</button>
 </article>
+-->
