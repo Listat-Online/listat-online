@@ -1,9 +1,10 @@
+import {PUBLIC_POCKETBASE_URL} from '$env/static/public';
 import PocketBase, {type RecordSubscription} from 'pocketbase';
 
 import type {FetchFunction, Id, Item, List} from './types';
 
 export function getPocketBase() {
-    return new PocketBase('http://localhost:8090');
+    return new PocketBase(PUBLIC_POCKETBASE_URL || undefined);
 }
 
 const pb = getPocketBase();
