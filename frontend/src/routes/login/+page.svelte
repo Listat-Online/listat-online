@@ -11,14 +11,22 @@
     let passwordInput: HTMLInputElement;
 
     async function handleLoginFormSubmit() {
+        login('local');
+    }
+
+    async function login(provider: string) {
         try {
-            await authStore.login({username, password});
+            if (provider == 'local') {
+                await authStore.login({username, password});
+            } else {
+                await authStore.login({provider});
+            }
             goto('/lists');
         } catch (error) {
             $modalIsOpen = true;
             loginFailureText = 'Error while logging in';
             if (error instanceof ClientResponseError) {
-                if (error.status === 400) {
+                if (provider == 'local' && error.status === 400) {
                     loginFailureText = 'Invalid credentials';
                 } else {
                     console.error('Login Error:', error.toJSON());
@@ -29,15 +37,10 @@
         }
     }
 
-    async function loginWithProvider(provider: string) {
-        const data = await authStore.login({provider});
-        goto('/lists');
-    }
-
     function onModalIsOpenChange(isOpen: boolean) {
         if (isOpen) {
             setTimeout(() => errorModalCloseButton.focus(), 0);
-        } else if (loginFailureText) {
+        } else if (loginFailureText && username) {
             passwordInput.focus();
         }
     }
@@ -101,10 +104,6 @@
     <header>
         <strong>Login with External Identity</strong>
     </header>
-    <button on:click={() => loginWithProvider('github')}>
-        Login with GitHub
-    </button>
-    <button on:click={() => loginWithProvider('gitlab')}>
-        Login with GitLab
-    </button>
+    <button on:click={() => login('github')}>Login with GitHub</button>
+    <button on:click={() => login('gitlab')}>Login with GitLab</button>
 </article>
