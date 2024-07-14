@@ -4,3 +4,4 @@ package-lock.json
 yarn.lock
 .svelte-kit
 build
+pb_public

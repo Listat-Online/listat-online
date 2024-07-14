@@ -12,6 +12,7 @@ const config = {
         // See https://kit.svelte.dev/docs/adapters for more information
         adapter: adapter({
             fallback: 'index.html', // See --indexFallback of PocketBase
+            pages: '../pocketbase/pb_public',
         }),
     },
 };
